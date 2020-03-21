@@ -54,9 +54,8 @@ if os.name != 'nt':
     ip = os.popen("ip a | grep ens33 | grep inet | awk -F' ' '{print $2}' | awk -F/ '{print $1}'").read()
     path = os.environ['PWD']
 
-'''
-
-'''
+if not os.path.exists('./bak'):
+    os.mkdir('bak')
 
 class InitDBConnecter(object):
 
